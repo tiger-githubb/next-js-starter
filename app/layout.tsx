@@ -1,11 +1,10 @@
 import { ThemeProvider } from "@/theme/ThemeProvider";
 import clsx from "clsx";
-import { GeistSans } from 'geist/font/sans';
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import "./globals.css";
 
 const geistSans = GeistSans;
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={clsx(`${geistSans.className} antialiased`, "bg-background")}>
+      <body
+        className={clsx(`${geistSans.className} antialiased`, "bg-background")}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
